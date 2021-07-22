@@ -27,13 +27,10 @@ int binary_tree_complete(const binary_tree_t *tree,
 {
 	if (tree == NULL)
 		return (1);
-	else
-	{
-		if (index >= number_nodes)
-			return (0);
-		return (binary_tree_complete(tree->left, number_nodes, 2 * index + 1)
-				&& binary_tree_complete(tree->right, number_nodes, 2 * index + 2));
-	}
+	if (index >= number_nodes)
+		return (0);
+	return (binary_tree_complete(tree->left, number_nodes, 2 * index + 1)
+			&& binary_tree_complete(tree->right, number_nodes, 2 * index + 2));
 }
 
 /**
