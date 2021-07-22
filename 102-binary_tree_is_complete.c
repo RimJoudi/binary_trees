@@ -7,9 +7,9 @@
 size_t binary_tree_size(const binary_tree_t *tree)
 {
 	if (tree == NULL)
-		return 0;
+		return (0);
 	else
-		return(binary_tree_size(tree->left) + binary_tree_size(tree->right) + 1);
+		return (binary_tree_size(tree->left) + binary_tree_size(tree->right) + 1);
 }
 
 
@@ -18,11 +18,12 @@ size_t binary_tree_size(const binary_tree_t *tree)
  *
  * @tree: a pointer to the root node of the tree to check
  * @number_nodes: number of nodes in the tree
- * @index: 
- * Return: 1 when tree is complete otherwise 0 
+ * @index:
+ * Return: 1 when tree is complete otherwise 0
  */
 
-int binary_tree_complete(const binary_tree_t *tree, size_t number_nodes, size_t index)
+int binary_tree_complete(const binary_tree_t *tree,
+	size_t number_nodes, size_t index)
 {
 	if (tree)
 	{
@@ -38,7 +39,7 @@ int binary_tree_complete(const binary_tree_t *tree, size_t number_nodes, size_t 
 /**
  * binary_tree_is_complete - checks if a binary tree is complete
  * @tree: a pointer to the root node of the tree to check
- * Return: 1 when tree is complete otherwise 0 
+ * Return: 1 when tree is complete otherwise 0
  */
 
 int binary_tree_is_complete(const binary_tree_t *tree)
